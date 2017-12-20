@@ -3,6 +3,7 @@ package main;
 
 import main.chapter_1_java_building_blocks.CreatingObjects;
 import main.chapter_1_java_building_blocks.ObjectReferanceAndPrimitivs;
+import main.chapter_1_java_building_blocks.Variables;
 
 public class Main {
 	
@@ -22,7 +23,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		initilizingExample();
 		primitivesExample();
-		
+		variableScopeExample();
 		
 		
 	}
@@ -35,6 +36,10 @@ public class Main {
 		
 		prim.printPrimitives();
 	}
-	
+	public static void variableScopeExample() {
+		Variables var = new Variables();
+		var.variableScope();
+		var.localVariableExample();
+	}
 
 }

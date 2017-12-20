@@ -1,2 +1,2 @@
-# Java_8_OCA
+# Java8 OCA
 Examples for Oracle OCA exam

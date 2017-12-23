@@ -1,7 +1,7 @@
 package main.chapter_1_java_building_blocks;
 
 
-public class CreatingObjects {
+public class CreatingObject {
 	
 	/*
 	 * Order of initialization static fields and blocks which ever comes first 
@@ -21,7 +21,7 @@ public class CreatingObjects {
 		System.out.println("This is a instance initializer block and instance field  i=" +i);
 	}
 	
-		public CreatingObjects() {
+		public CreatingObject() {
 			System.out.println("This is a constructor and it is last to initialize");
 			
 			Object o = new Object();//Creating new Object with reference of Object o 

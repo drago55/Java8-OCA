@@ -28,13 +28,13 @@ public class StringClass {
 
     }
 
-    public static void immutableExample(){
+    public static void immutableExample() {
 
-        String someString="I am a String";
+        String someString = "I am a String";
         someString.toLowerCase();
         print(someString); // Prints "I am a String"
 
-        someString=someString.toLowerCase(); //we are saving changed string
+        someString = someString.toLowerCase(); //we are saving changed string
         print(someString); //Prints "i am a string"
 
     }
@@ -63,33 +63,35 @@ public class StringClass {
         print(myString.indexOf("us", 1)); //prints 2
 
     }
-    public static void replaceMethod(){
+
+    public static void replaceMethod() {
         /*
             String replace(char oldChar, char newChar)
             String replace(CharSequence oldChar, CharSequence newChar)
          */
-        print("AAABBCccaa".replace('A','a')); //prints aaabbCccaa
-        print(myString.replace("h","H"));
+        print("AAABBCccaa".replace('A', 'a')); //prints aaabbCccaa
+        print(myString.replace("h", "H"));
     }
-    public static void trimMethod(){
+
+    public static void trimMethod() {
         /*
          Method removes white spaces from beginning and end of a string
          */
 
-        String string= "        ab  c   b   ";
+        String string = "        ab  c   b   ";
 
         print(string.trim()); //prints "ab c b"  without quotes
 
     }
 
-    public static void methodChaining(){
+    public static void methodChaining() {
 
         /*
             This code creates four different String objects  to read this code start from first method at left side
             to the right all the way to the semicolon
          */
 
-        String result="House  ".trim().toLowerCase().replace("h","H");
+        String result = "House  ".trim().toLowerCase().replace("h", "H");
         print(result); //Prints "House"  -> first trims to "House" -> goes toLowerCase "house" -> replaces h to H
         /*
             First object is "House  "  second "House" third "house" fourth "House"
@@ -140,7 +142,8 @@ public class StringClass {
         print(myString.startsWith("h"));
         print(myString.endsWith("e"));
     }
-    public static void containsMethod(){
+
+    public static void containsMethod() {
         /*
             This method looks for matches in the String match can be anywhere in string and is case sensitive
          */
@@ -148,7 +151,6 @@ public class StringClass {
         print(myString.contains("S")); //prints false
 
     }
-
 
 
     public static void stringCharAtMethod() {

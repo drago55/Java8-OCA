@@ -4,8 +4,7 @@ package main;
 import main.chapter_1_java_building_blocks.CreatingObject;
 import main.chapter_1_java_building_blocks.ObjectReferanceAndPrimitivs;
 import main.chapter_1_java_building_blocks.Variables;
-import main.chapter_2_operators_and_statements.JavaOperators;
-import main.chapter_2_operators_and_statements.JavaStatements;
+import main.chapter_3_core_java_api.StringClass;
 
 public class Main {
 
@@ -31,7 +30,16 @@ public class Main {
 		//primitivesExample();
 		//variableScopeExample();
 		//javaOperators();
-		javaStatements();
+		//javaStatements();
+		stringExamples();
+	}
+
+	public static void stringExamples(){
+		//StringClass.concatenationExample();
+		//StringClass.stringIndexOfMethod();
+		//StringClass.substringMethod();
+		//StringClass.methodChaining();
+		StringClass.immutableExample();
 	}
 
 	public static void initilizingExample() {
@@ -53,7 +61,7 @@ public class Main {
 		//JavaStatements.doWhileStatement();
 		//JavaStatements.theBasicForStatement();
 		//JavaStatements.nestedForLoop();
-		JavaStatements.advanceFlowControl();
+		//JavaStatements.advanceFlowControl();
 	}
 	
 	public static void primitivesExample() {

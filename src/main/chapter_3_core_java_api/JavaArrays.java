@@ -110,5 +110,80 @@ public class JavaArrays {
         print(Arrays.binarySearch(num,3)); //It will print 0 since it willl be found at first index
     }
 
+    public static void varArgsExample(String... args){
+
+        /*
+               public static void main(String[] args)
+               public static void main(String args[])
+               public static void main(String... args)
+               The third example use a syntax called varargs (variable arguments)
+
+         */
+        for (int i = 0; i < args.length; i++) {
+            String arg = args[i];
+                print(arg);
+        }
+
+    }
+
+    public static void multiDimensionalArray(){
+
+        /*
+            Arrays are objects and they can hold other objects and as well other arrays
+         */
+        int[][] d2;                //2D array
+        int  array[][];            //2D array
+        int[] array2[];            //2D array
+        int[] array3[],array4[][]; //2D array and 3D array
+
+    }
+
+    public static void multiDimensionalArrayInit(){
+
+        /* String [2][3] = new String[][] --> invalid size specification it's not allowed to specify on left side
+        *       *
+        */
+
+        String [][] array= new String[3][2];
+
+        /*
+
+            array[0][1] = assignValue to first index of first array and second index of second array
+
+         */
+        int[][] differentSize= {{1,2,3},{1},{2,3}};
+        /*
+                initializing array with elements int[][] differentSize=  ->first array {  contains array-> {1,2,3} separated with -> , {1},{2,3}  };
+                elements in array must be separated with ,
+         */
+
+
+    }
+
+    public static void usingMultiDimensionalArray(){
+        int[][] twoD= new int[3][2];
+        /*
+            We can use two standard for loops or two enhanced loops and combinations
+         */
+
+        for (int i = 0; i < twoD.length; i++) {
+            int[] ints = twoD[i];
+            for (int j = 0; j < ints.length; j++) {
+                int anInt = ints[j];
+                print(anInt);
+            }
+        }
+
+
+        for (int[] ints: twoD ) {
+            for (int i: ints ) {
+                //For each array in twoD print every value of that array
+                print(i);
+            }
+        }
+
+
+    }
+
 
 }

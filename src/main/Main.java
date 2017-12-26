@@ -4,10 +4,7 @@ package main;
 import main.chapter_1_java_building_blocks.CreatingObject;
 import main.chapter_1_java_building_blocks.ObjectReferanceAndPrimitivs;
 import main.chapter_1_java_building_blocks.Variables;
-import main.chapter_3_core_java_api.ArrayListClass;
-import main.chapter_3_core_java_api.JavaArrays;
-import main.chapter_3_core_java_api.StringBuilderClass;
-import main.chapter_3_core_java_api.StringClass;
+import main.chapter_3_core_java_api.*;
 
 public class Main {
 
@@ -37,13 +34,30 @@ public class Main {
         //stringExamples();
         //stringBuilderExample();
         //javaArrays();
-        arrayListClass();
+        //arrayListClass();
+        //wrapperClasse();
+        javaDateTimeClass();
+
     }
-    public static void arrayListClass(){
+
+    public static void javaDateTimeClass() {
+        //JavaDateTimeClass.dateTimeExample();
+        JavaDateTimeClass.formattingDateTime();
+        JavaDateTimeClass.parsingDateTime();
+    }
+
+    public static void wrapperClasse() {
+        //WrapperClasses.parseExample();
+    }
+
+    public static void arrayListClass() {
         //ArrayListClass.addMethodArrayList();
         //ArrayListClass.isEmptySize();
-        ArrayListClass.clearContainsAndEquals();
+        //ArrayListClass.clearContainsAndEquals();
+        //ArrayListClass.convertingBetweenArrayAndList();
+        //ArrayListClass.sortingMethod();
     }
+
     public static void stringBuilderExample() {
         //StringBuilderClass.creatingStringBuilder();
         //StringBuilderClass.stringBuilderMethods();
@@ -73,7 +87,7 @@ public class Main {
 
     }
 
-    public static void javaArrays(){
+    public static void javaArrays() {
 
         JavaArrays.binarySearchExample();
 

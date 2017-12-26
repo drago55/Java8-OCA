@@ -1,6 +1,8 @@
 package main.chapter_3_core_java_api;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ArrayListClass {
@@ -109,6 +111,56 @@ public class ArrayListClass {
         list.clear();               //Clearing list
         print(list.isEmpty());      //Prints true
 
+
+    }
+
+    public static void autoboxingExample() {
+
+        List<Integer> num = new ArrayList<>();
+        num.add(new Integer(1));
+        num.add(2); //if we add primitive type in a list it will be autoboxed to Integer object
+
+    }
+
+    public static void convertingBetweenArrayAndList() {
+
+        List<String> list = new ArrayList<>();
+        list.add("one");
+        list.add("two");
+        list.add("three");
+        String[] stringArray = list.toArray(new String[0]);
+        print(stringArray.length);
+        for (int i = 0; i < stringArray.length; i++) {
+            String s = stringArray[i];
+            print(s);
+        }
+        /*
+            Converting array to a List are linked it means any change is made to one is available to other
+            it is a fixed-size list backed Liste becouse array changes with it
+         */
+        String[] array = {"one", "two"};
+        List<String> list2 = Arrays.asList(array);
+
+        print(list2.size()); //Prints size of 2
+        list2.set(0, "num");
+        array[1] = "three";
+        for (int i = 0; i < array.length; i++) {
+            print(array[i]);
+            //Prints  num, three array was changed too
+        }
+        //list2.remove(0); will throw UnsupportedOperationException we are not allowed to change size of a list
+
+    }
+
+    public static void sortingMethod() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(8);
+        numbers.add(3);
+        numbers.add(10);
+        numbers.add(6);
+        Collections.sort(numbers);
+        print(numbers);
 
     }
 

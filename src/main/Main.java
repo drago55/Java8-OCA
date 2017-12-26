@@ -4,6 +4,7 @@ package main;
 import main.chapter_1_java_building_blocks.CreatingObject;
 import main.chapter_1_java_building_blocks.ObjectReferanceAndPrimitivs;
 import main.chapter_1_java_building_blocks.Variables;
+import main.chapter_3_core_java_api.JavaArrays;
 import main.chapter_3_core_java_api.StringBuilderClass;
 import main.chapter_3_core_java_api.StringClass;
 
@@ -33,13 +34,15 @@ public class Main {
         //javaOperators();
         //javaStatements();
         //stringExamples();
-        stringBuilderExample();
+        //stringBuilderExample();
+        javaArrays();
     }
 
     public static void stringBuilderExample() {
         //StringBuilderClass.creatingStringBuilder();
         //StringBuilderClass.stringBuilderMethods();
-        StringBuilderClass.insertMethod();
+        // StringBuilderClass.insertMethod();
+        StringBuilderClass.understandingEqualityOfStringsAndStringBuilder();
     }
 
     public static void stringExamples() {
@@ -61,6 +64,12 @@ public class Main {
         //JavaOperators.promotionExample();
         //JavaOperators.instanceOfOperator();
         //JavaOperators.equalityOperators();
+
+    }
+
+    public static void javaArrays(){
+
+        JavaArrays.binarySearchExample();
 
     }
 

@@ -5,6 +5,8 @@ import main.chapter_1_java_building_blocks.CreatingObject;
 import main.chapter_1_java_building_blocks.ObjectReferanceAndPrimitivs;
 import main.chapter_1_java_building_blocks.Variables;
 import main.chapter_3_core_java_api.*;
+import main.chapter_4_methods_encapsulation.OverloadingMethods;
+import main.chapter_4_methods_encapsulation.StaticVsInstance;
 
 public class Main {
 
@@ -26,7 +28,7 @@ public class Main {
         //We are calling static method in Class Main that is is in examples package and we are passing array of string
         //main.chapter_1_java_building_blocks.examples.Main.main(new String []{"one"});
 
-        //initilizingExample();
+        //initializingExample();
         //primitivesExample();
         //variableScopeExample();
         //javaOperators();
@@ -36,14 +38,25 @@ public class Main {
         //javaArrays();
         //arrayListClass();
         //wrapperClasse();
-        javaDateTimeClass();
+        //javaDateTimeClass();
+        //staticVsInstance();
+        overloadMethods();
 
+    }
+
+    public static void staticVsInstance() {
+        //StaticVsInstance.passingDataExample();
+
+    }
+
+    public static void overloadMethods() {
+        OverloadingMethods.autoBoxingExample();
     }
 
     public static void javaDateTimeClass() {
         //JavaDateTimeClass.dateTimeExample();
-        JavaDateTimeClass.formattingDateTime();
-        JavaDateTimeClass.parsingDateTime();
+        //JavaDateTimeClass.formattingDateTime();
+        //JavaDateTimeClass.parsingDateTime();
     }
 
     public static void wrapperClasse() {

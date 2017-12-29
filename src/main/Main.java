@@ -5,8 +5,12 @@ import main.chapter_1_java_building_blocks.CreatingObject;
 import main.chapter_1_java_building_blocks.ObjectReferanceAndPrimitivs;
 import main.chapter_1_java_building_blocks.Variables;
 import main.chapter_3_core_java_api.*;
+import main.chapter_4_methods_encapsulation.ImmutableClass;
+import main.chapter_4_methods_encapsulation.OrderOfInitialization;
 import main.chapter_4_methods_encapsulation.OverloadingMethods;
-import main.chapter_4_methods_encapsulation.StaticVsInstance;
+import main.chapter_4_methods_encapsulation.example.ImmutableExample;
+
+import java.util.ArrayList;
 
 public class Main {
 
@@ -40,8 +44,22 @@ public class Main {
         //wrapperClasse();
         //javaDateTimeClass();
         //staticVsInstance();
-        overloadMethods();
+        //overloadMethods();
+        //orderOfInitialization();
+        immutableClass();
+    }
 
+    private static void print(Object o) {
+        System.out.println(o);
+    }
+
+    public static void immutableClass() {
+        ImmutableExample.theBadWay();
+        ImmutableExample.theProperWay();
+    }
+
+    public static void orderOfInitialization() {
+        OrderOfInitialization order = new OrderOfInitialization();
     }
 
     public static void staticVsInstance() {
@@ -50,7 +68,7 @@ public class Main {
     }
 
     public static void overloadMethods() {
-        OverloadingMethods.autoBoxingExample();
+        OverloadingMethods.autoBoxingConversionExample();
     }
 
     public static void javaDateTimeClass() {

@@ -30,6 +30,13 @@ public class OverloadingMethods {
         print("Overloaded method with two same parameters but in different order");
     }
 
+    public void overloadExample(int[] args) {
+        print("Overloaded method with array parameter");
+    }
+    /*
+    Will fail to compile because int...args is treated as array so we can't have overloaded method with same parameter
+    public void overloadExample(int... args){} //Method with varargs
+    */
 
     private static void print(Object o) {
         System.out.println(o);
@@ -39,33 +46,63 @@ public class OverloadingMethods {
     /*
         AutoBoxing example
      */
-    private static void autoBox(Integer i){
+    private static void myMethod(Integer i) {
         print("In Integer");
     }
-    private static void autoBox(Object o){
+
+    private static void myMethod(Object o) {
         print("In object");
     }
-    private static void autoBox(int i){
+
+    private static void myMethod(int i) {
         print("in int");
     }
-    private static void autoBox(long l){
+
+    private static void myMethod(long l) {
         print("in long");
     }
-    private static void autoBox(String s){
+
+    private static void myMethod(String s) {
         print("in string");
     }
-    private static void autoBox(double d){
+
+    private static void myMethod(double d) {
         print("in double");
     }
-    public static void autoBoxingExample(){
 
-        autoBox("10");
-        autoBox(10);
-        autoBox(10.0);
-        autoBox(10l);
-        Object o= new Integer(10);
-        autoBox(o);
-        autoBox(o);
+    public static void autoBoxingConversionExample() {
+
+        myMethod("10");
+        myMethod(10);
+        myMethod(10.0);
+        myMethod(10l);
+        Object o = new Integer(10);
+        myMethod(o);
+        myMethod(o);
+
+        /*
+            Order to choose the right overloaded method
+            Exact match by type
+            Larger primitive type
+            Autoboxed type
+            Varargs
+
+         */
+
+        /*
+            tooManyConversions(1); does not compile because java is converting int to long and then it
+            needs to convert to Long Object. Only one conversion is possible
+         */
+        tooManyConversions(1l); //This will compile because we are passing long which is converted to Long
+
+    }
+
+    public static void tooManyConversions(Long l) {
+        print("In Long object");
+    }
+
+    public static void tooManyConversions(Long... l) {
+        print("In Long varargs");
     }
 
 }

@@ -2,7 +2,7 @@ package main.chapter_1_java_building_blocks;
 
 class MyObject{}
 
-public class ObjectReferanceAndPrimitivs {
+public class ObjectReferenceAndPrimitive {
 	//Field of primitives will be initialized in default value
 	boolean bool; //false
 	byte b;  //0

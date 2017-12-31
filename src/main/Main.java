@@ -2,19 +2,20 @@
 package main;
 
 import main.chapter_1_java_building_blocks.CreatingObject;
-import main.chapter_1_java_building_blocks.ObjectReferanceAndPrimitivs;
+import main.chapter_1_java_building_blocks.ObjectReferenceAndPrimitive;
 import main.chapter_1_java_building_blocks.Variables;
 import main.chapter_3_core_java_api.*;
-import main.chapter_4_methods_encapsulation.ImmutableClass;
 import main.chapter_4_methods_encapsulation.OrderOfInitialization;
 import main.chapter_4_methods_encapsulation.OverloadingMethods;
 import main.chapter_4_methods_encapsulation.example.ImmutableExample;
+import main.chapter_4_methods_encapsulation.lambda_example.MyLambda;
+import main.chapter_4_methods_encapsulation.lambda_example.Student;
 
 import java.util.ArrayList;
 
 public class Main {
 
-    static ObjectReferanceAndPrimitivs prim = new ObjectReferanceAndPrimitivs();
+    static ObjectReferenceAndPrimitive prim = new ObjectReferenceAndPrimitive();
 
     /*
      * This is main method entry point to application
@@ -46,11 +47,42 @@ public class Main {
         //staticVsInstance();
         //overloadMethods();
         //orderOfInitialization();
-        immutableClass();
+        //immutableClass();
+        lambdaExample();
     }
 
     private static void print(Object o) {
         System.out.println(o);
+    }
+
+    public static void lambdaExample() {
+        //We crated some data that we will test with lambda expression
+        ArrayList<Student> list = new ArrayList<>();
+        Student s1 = new Student("Toni", 1);
+        Student s2 = new Student("Marko", 5);
+        Student s3 = new Student("John", 3);
+        Student s4 = new Student("Craig", 4);
+        Student s5 = new Student("Ann", 2);
+        Student s6 = new Student("Michael", 1);
+
+        list.add(s1);
+        list.add(s2);
+        list.add(s3);
+        list.add(s4);
+        list.add(s5);
+        list.add(s6);
+        //The old way
+        // MyLambda.printStudents(list, new TheOldWay());
+        //Our lambda expression used with our  functional interface
+        //MyLambda.printStudents(list, a -> a.isPassed());
+        //Builtin lambda predicate
+        //MyLambda.printWithLambdaPredicate(list, p -> p.isPassed());
+        //Different syntax
+        MyLambda.printStudents(list, (Student s) -> {
+            return s.isPassed();
+        });
+
+
     }
 
     public static void immutableClass() {

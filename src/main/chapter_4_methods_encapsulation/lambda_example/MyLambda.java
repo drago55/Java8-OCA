@@ -54,6 +54,10 @@ public class MyLambda {
 
     }
 
+    public static void usingNoArgumentLambda(NoArgumentLambda lambda) {
+        lambda.run();
+    }
+
     public static void print(Object o) {
         System.out.println(o);
     }

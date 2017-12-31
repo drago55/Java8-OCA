@@ -10,6 +10,7 @@ import main.chapter_4_methods_encapsulation.OverloadingMethods;
 import main.chapter_4_methods_encapsulation.example.ImmutableExample;
 import main.chapter_4_methods_encapsulation.lambda_example.MyLambda;
 import main.chapter_4_methods_encapsulation.lambda_example.Student;
+import main.chapter_5_class_design.polymorphism.DogExample;
 
 import java.util.ArrayList;
 
@@ -48,7 +49,15 @@ public class Main {
         //overloadMethods();
         //orderOfInitialization();
         //immutableClass();
-        lambdaExample();
+        //lambdaExample();
+        //dogExample();
+        dogExample();
+    }
+
+    public static void dogExample() {
+        DogExample.example();
+        DogExample.castingObject();
+        DogExample.virtualMethodExample();
     }
 
     private static void print(Object o) {
@@ -57,6 +66,14 @@ public class Main {
 
     public static void lambdaExample() {
         //We crated some data that we will test with lambda expression
+        /*
+            Lambda expression is anonymous method it has parameters and body just like all method do but it doesn't have name
+
+            void runMyLambda((Object o)->{
+            return o.doSomething()
+            });
+
+         */
         ArrayList<Student> list = new ArrayList<>();
         Student s1 = new Student("Toni", 1);
         Student s2 = new Student("Marko", 5);
@@ -81,6 +98,8 @@ public class Main {
         MyLambda.printStudents(list, (Student s) -> {
             return s.isPassed();
         });
+
+        MyLambda.usingNoArgumentLambda(() -> print("Hello world from no argument lambda"));
 
 
     }

@@ -11,6 +11,10 @@ import main.chapter_4_methods_encapsulation.example.ImmutableExample;
 import main.chapter_4_methods_encapsulation.lambda_example.MyLambda;
 import main.chapter_4_methods_encapsulation.lambda_example.Student;
 import main.chapter_5_class_design.polymorphism.DogExample;
+import main.chapter_5_class_design.polymorphism.example2.A;
+import main.chapter_5_class_design.polymorphism.example2.B;
+import main.chapter_5_class_design.polymorphism.example2.C;
+import main.chapter_5_class_design.polymorphism.example2.Implementation;
 
 import java.util.ArrayList;
 
@@ -51,7 +55,17 @@ public class Main {
         //immutableClass();
         //lambdaExample();
         //dogExample();
-        dogExample();
+        //dogExample();
+        polymorphism();
+    }
+
+    public static void polymorphism() {
+        //  Implementation.example();
+        Implementation.polymorphicParameters(new A());
+        Implementation.polymorphicParameters(new B());
+        Implementation.polymorphicParameters(new C());
+        Implementation.polymorphicParameters(new Implementation());
+
     }
 
     public static void dogExample() {

@@ -5,7 +5,7 @@ public class DogExample {
 
     public static void example() {
 
-        Dog dog = new Dog();
+        Dog dog = new Rex();
 
         print("Dog " + dog.name + " barks " + dog.isBarking());
 

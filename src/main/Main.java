@@ -1,4 +1,3 @@
-//
 package main;
 
 import main.chapter_1_java_building_blocks.CreatingObject;
@@ -15,6 +14,7 @@ import main.chapter_5_class_design.polymorphism.example2.A;
 import main.chapter_5_class_design.polymorphism.example2.B;
 import main.chapter_5_class_design.polymorphism.example2.C;
 import main.chapter_5_class_design.polymorphism.example2.Implementation;
+import main.chapter_6_exceptions.ExceptionExample;
 
 import java.util.ArrayList;
 
@@ -55,8 +55,13 @@ public class Main {
         //immutableClass();
         //lambdaExample();
         //dogExample();
-        //dogExample();
-        polymorphism();
+        //polymorphism();
+        exceptionExample();
+    }
+
+    public static void exceptionExample() {
+        //ExceptionExample.handlingException();
+        print(ExceptionExample.exceptionExample2());
     }
 
     public static void polymorphism() {

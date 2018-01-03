@@ -191,6 +191,26 @@ public class ExceptionExample {
 
     }
 
+    public static void poorExceptionHandlingExample() {
+        String text = null;
+
+        try {
+            readFile();
+        } catch (IOException e) {
+            //exception not handled
+            //Its good practice to write stack trace or at least print message
+            //And consider whether to continuing is best action
+            //In this simulated example we failed to read file and it resulted in IOException
+            //then we where calling methods on null object witch resulted in null pointer exception
+        }
+        print(text.replace("", " "));
+        //resulting in null pointer exception
+    }
+
+    private static void readFile() throws IOException {
+        throw new IOException();
+    }
+
     public static void print(Object o) {
         System.out.println(o);
     }

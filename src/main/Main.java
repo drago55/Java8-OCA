@@ -61,7 +61,8 @@ public class Main {
 
     public static void exceptionExample() {
         //ExceptionExample.handlingException();
-        print(ExceptionExample.exceptionExample2());
+        //print(ExceptionExample.exceptionExample2());
+        ExceptionExample.poorExceptionHandlingExample();
     }
 
     public static void polymorphism() {

@@ -2,19 +2,21 @@ package main.chapter_4_methods_encapsulation;
 
 import java.util.ArrayList;
 
-public class ImmutableClass {
+public final class  ImmutableClass {
     /*
 
         Immutable classes are allowed to have values and we have constructor that allows value to be set.
         Immutable class is one which can't be change after it was instantiation
-
+        Make member fields private and final and include public getters for them.
+        Make the class final.
+        Instead of a default no-args constructor, create a constructor that initializes the members.
      */
 
-    private String name;
-    private String address;
-    private int age;
+    private final String name;
+    private final String address;
+    private final int age;
 
-    private ArrayList<String> myList = new ArrayList<>();
+    private final ArrayList<String> myList = new ArrayList<>();
 
 
     public ImmutableClass(String name, String address, int age) {

@@ -52,11 +52,11 @@ public class Main {
         //staticVsInstance();
         //overloadMethods();
         //orderOfInitialization();
-        //immutableClass();
+        immutableClass();
         //lambdaExample();
         //dogExample();
         //polymorphism();
-        exceptionExample();
+        //exceptionExample();
     }
 
     public static void exceptionExample() {
